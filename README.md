@@ -12,19 +12,23 @@
 10. All non-personal questions must be asked in **#2_software_general** or during worktime meetings.
 11. If you will not be able to attend a meeting, slack **Ludi, Kate, and Emily** least **24 hours** prior to the meeting.
 
---------
-#### 1. Functionality
-  - Have you tested your code, including edge cases?
-  - Does your code accomplish the assigned task?
-  
-#### 2. Concepts
-  - Does your code use only concepts previously taught by us?
-  - Does your code use concepts relevant to the assignment?
-  
-#### 3. Style
-  - Does your code meet our style guidelines?
-    - Double quotes
-    - Proper indentation
-    - Appropriate usage of snake**case and CapWords
-    - Comment formatting
-    - Naming conventions (may be given in assignment)
+---
+
+## 1. Functionality
+
+- Have you tested your code, including edge cases?
+- Does your code accomplish the assigned task?
+
+## 2. Concepts
+
+- Does your code use only concepts previously taught by us?
+- Does your code use concepts relevant to the assignment?
+
+## 3. Style
+
+- Does your code meet our style guidelines?
+  - Double quotes
+  - Proper indentation
+  - Appropriate usage of snake\*\*case and CapWords
+  - Comment formatting
+  - Naming conventions (may be given in assignment)
