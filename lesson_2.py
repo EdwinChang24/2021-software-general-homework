@@ -18,7 +18,15 @@
 # Have the user input how much money Gregory has then print how many of each 
 # toy they can afford, as well as how much money they'd have remaining
 
+# The toys and their prices are as follows:
+# Jumbo Baby Yoda Plush - $20
+# Beyblades - $7.20
+# Sticky Hands - $0.50
+
 #########################################################
+
+import math as m
+
 
 def test_scores() -> None:
     """
@@ -46,8 +54,35 @@ def test_scores() -> None:
     return
 
 
-def toys():
-    # TODO
+def toys() -> None:
+    """
+    Asks the user how much money they have, then displays how much of each item can be purchased at Toys 'N' Us with
+    that money.
+    """
+    prices: dict = {
+        "plush": 20.00,
+        "beyblade": 7.20,
+        "sticky_hands": 0.50
+    }
+    money: float = 0.0
+    while True:
+        try:
+            money: float = float(input("Enter how much money you currently have, in dollars: "))
+            break
+        except:
+            print("Whooops, that's not a number! Try again.")
+            continue
+    print("Here's how much of each toy you can afford: ", end="")
+    plush_count: int = m.floor(money / prices["plush"])
+    money %= prices["plush"]
+    print(str(plush_count) + " Jumbo Baby Yoda Plushies, ", end="")
+    beyblade_count: int = m.floor(money / prices["beyblade"])
+    money %= prices["beyblade"]
+    print(str(beyblade_count) + " Beyblades, and ", end="")
+    sticky_hands_count: int = m.floor(money / prices["sticky_hands"])
+    money %= prices["sticky_hands"]
+    print(str(sticky_hands_count) + " Sticky Hands.")
+    print("Your remaining money after these purchases: $" + str(round(money, ndigits=2)))  # floats are imprecise
     return
 
 
