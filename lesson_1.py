@@ -9,15 +9,21 @@
 
 def main():
     # Team Number
-    team_number: int = 1678
+    team_number: int = int(input("What is the Team Number? "))
     # Team Name
-    team_name: str = "Citrus Circuits"
+    team_name: str = input("What is the Team Name? ")
     # Location
-    location: str = "Davis, CA"
+    location: str = input("Where is the Location? ")
     # Rookie Year
-    rookie_year: int = 2004
+    rookie_year: int = int(input("When was the Rookie Year? "))
     # Is Active
-    is_active: bool = True
+    is_active: bool = True if input("Is the team currently active? (y/n) ").lower() == "y" else False
+    print("The number of team " + team_name
+          + " is " + str(team_number)
+          + ". The location is " + location
+          + " and the rookie year was " + str(rookie_year)
+          + ". The team is currently " + ("active." if is_active else "inactive.")
+          )
 
 
 if __name__ == "__main__":
