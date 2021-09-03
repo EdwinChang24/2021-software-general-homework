@@ -101,7 +101,8 @@ def toys() -> None:
 
 def factorials() -> None:
     """
-    TODO
+    Queries the user for an integer from 1 to 9, then gives the factorial of the integer
+    (or maybe not, you'll have to find out).
     """
     x: int = 1
     while True:
