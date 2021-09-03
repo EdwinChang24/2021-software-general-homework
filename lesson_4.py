@@ -12,6 +12,9 @@
 
 #####################################
 
+import math as m
+
+
 def conversion(degrees: float = 0.0, fahrenheit: bool = True) -> float:
     """
     Converts a number of degrees in either Fahrenheit or Celsius to the other scale, and prints the result.
@@ -29,10 +32,16 @@ def conversion(degrees: float = 0.0, fahrenheit: bool = True) -> float:
     return result
 
 
-def sphere_volume():
-    # TODO
-    return
+def sphere_volume(radius: float) -> float:
+    """
+    Calculates the volume of a sphere given the radius.
+    :param radius: The radius of the sphere.
+    :return: The volume of the sphere.
+    """
+    return (4 / 3) * m.pi * (radius ** 3)
 
 
 if __name__ == "__main__":
     conversion(degrees=20.0, fahrenheit=False)
+    r: float = 1.0
+    print("Volume of a sphere with radius " + str(r) + ": " + str(sphere_volume(radius=r)))
