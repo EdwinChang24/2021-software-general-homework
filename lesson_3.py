@@ -38,7 +38,7 @@ from typing import List
 def length_of_list(in_list: list) -> int:
     """
     :param in_list: A list.
-    :returns: The length of <code>in_list</code>.
+    :return: The length of <code>in_list</code>.
     """
     x: int = 0
     for _ in in_list:
@@ -49,7 +49,7 @@ def length_of_list(in_list: list) -> int:
 def dictionaries() -> dict:
     """
     Generates a dictionary.
-    :returns: The generated dictionary.
+    :return: The generated dictionary.
     """
     mydict: dict = {}
     while True:
@@ -64,7 +64,7 @@ def dictionaries() -> dict:
 def dictionaries_extended() -> dict:
     """
     Generates a dictionary, but with checking for spaces in words as well as duplicate words or translations.
-    :returns: The generated dictionary.
+    :return: The generated dictionary.
     """
     mydict: dict = {}
     while True:
@@ -106,7 +106,7 @@ def translate(translate_dict: dict) -> str:
     """
     Translates a given sentence using the dictionary and prints the output.
     :param translate_dict: The dictionary to use in translating the sentence.
-    :returns: The translated sentence.
+    :return: The translated sentence.
     """
     original_sentence_list: List[str] = (
         input("Successfully created your dictionary! Enter a sentence to translate:\n")
