@@ -127,5 +127,5 @@ if __name__ == "__main__":
         dictionary = dictionaries() if use_extended != "y" and use_extended.lower() != "yes"\
             else dictionaries_extended()
         translate(translate_dict=dictionary)
-    except:
+    except Exception:
         print("Whoops, an unknown error occured! Please report this.")

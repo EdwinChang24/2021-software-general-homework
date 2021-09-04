@@ -49,7 +49,7 @@ def test_scores() -> None:
         score_1: int = int(input("Enter the first test score:\n"))
         score_2: int = int(input("Enter the second test score:\n"))
         score_3: int = int(input("Enter the third test score:\n"))
-    except:
+    except Exception:
         print("Whoops, that doesn't look like an integer!")
         return
     avg: float = (score_1 + score_2 + score_3) / 3
@@ -82,7 +82,7 @@ def toys() -> None:
         try:
             money: float = float(input("Enter how much money you currently have, in dollars: "))
             break
-        except:
+        except Exception:
             print("Whoops, that's not a number! Try again.")
             continue
     print("Here's how much of each toy you can afford: ", end="")
@@ -109,7 +109,7 @@ def factorials() -> None:
         try:
             x = int(input("Enter a number from 1 through 9 to take the factorial of: "))
             break
-        except:
+        except Exception:
             print("That doesn't look like an integer, try again!")
             continue
     if x <= 0:
