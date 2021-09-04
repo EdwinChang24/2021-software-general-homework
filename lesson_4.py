@@ -12,6 +12,14 @@
 
 #####################################
 
+# Create a function called ‘factorial’ that accepts one integer argument, num.
+# If num is not a positive number, return None.
+# Otherwise, return the factorial of num (the product of all whole numbers starting at 1 and ending at x).
+# E.g. the factorial of 3 is 3 * 2 * 1, which equals 6
+# The factorial of 0 is 1
+
+#####################################
+
 import math as m
 
 
@@ -41,7 +49,23 @@ def sphere_volume(radius: float) -> float:
     return (4 / 3) * m.pi * (radius ** 3)
 
 
+def factorial(num: int):
+    """
+    Calculates the factorial of a given positive integer.
+    :param num: A positive integer to find the factorial of.
+    :return: The factorial of the given positive integer.
+    """
+    if num < 0:
+        return None
+    num_f: int = 1
+    for i in range(1, num+1):
+        num_f *= i
+    return num_f
+
+
 if __name__ == "__main__":
     conversion(degrees=20.0, fahrenheit=False)
-    r: float = 1.0
+    r: float = 1.0  # example
     print("Volume of a sphere with radius " + str(r) + ": " + str(sphere_volume(radius=r)))
+    n: int = 3  # example
+    print("Factorial of " + str(n) + " is " + str(factorial(n)) + ".")
