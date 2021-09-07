@@ -54,7 +54,7 @@ def dictionaries() -> dict:
     mydict: dict = {}
     while True:
         word: str = input("Enter a word:\n")
-        mydict[word]: str = input("Enter a translation for the word \"" + word + "\":\n")
+        mydict[word]: str = input(f"Enter a translation for the word \"{word}\":\n")
         add_another: str = input("Word recorded! Would you like to add another word? (y/n) ")
         if add_another.lower() != "y" and add_another.lower() != "yes":
             break
@@ -84,7 +84,7 @@ def dictionaries_extended() -> dict:
                 break
             else:
                 continue
-        translation: str = input("Enter a translation for the word \"" + word + "\":\n")
+        translation: str = input(f"Enter a translation for the word \"{word}\":\n")
         # check for duplicated value
         if translation in mydict.values():
             add_another: str = input(
@@ -115,7 +115,7 @@ def translate(translate_dict: dict) -> str:
     for word in original_sentence_list:
         translated_sentence_list.append(translate_dict[word] if word in translate_dict else word)
     translated_sentence: str = " ".join(translated_sentence_list)
-    print("Here is your translated sentence:\n" + translated_sentence)
+    print(f"Here is your translated sentence:\n{translated_sentence}")
     return translated_sentence
 
 

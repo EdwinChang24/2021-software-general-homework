@@ -33,10 +33,10 @@ def conversion(degrees: float = 0.0, fahrenheit: bool = True) -> float:
     """
     if fahrenheit:
         result: float = (degrees - 32) * 5 / 9
-        print(str(degrees) + "\u00B0F can be converted to " + str(result) + "\u00B0C.")
+        print(f"{degrees}\u00B0F can be converted to {result}\u00B0C.")
     else:
         result: float = (degrees * 9 / 5) + 32
-        print(str(degrees) + "\u00B0C can be converted to " + str(result) + "\u00B0F.")
+        print(f"{degrees}\u00B0C can be converted to {result}\u00B0F.")
     return result
 
 
@@ -66,9 +66,9 @@ def factorial(num: int):
 def main():
     conversion(degrees=20.0, fahrenheit=False)
     r: float = 1.0  # example
-    print("Volume of a sphere with radius " + str(r) + ": " + str(sphere_volume(radius=r)))
+    print(f"Volume of a sphere with radius {r}: {sphere_volume(radius=r)}")
     n: int = 3  # example
-    print("Factorial of " + str(n) + " is " + str(factorial(n)) + ".")
+    print(f"Factorial of {n} is {factorial(n)}.")
 
 
 if __name__ == "__main__":

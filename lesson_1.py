@@ -18,10 +18,10 @@ def main():
     rookie_year: int = int(input("When was the Rookie Year? "))
     # Is Active
     is_active: bool = True if input("Is the team currently active? (y/n) ").lower() == "y" else False
-    print("The number of team " + team_name
-          + " is " + str(team_number)
-          + ". The location is " + location
-          + " and the rookie year was " + str(rookie_year)
+    print(f"The number of team {team_name}"
+          + f" is {team_number}"
+          + f". The location is {location}"
+          + f" and the rookie year was {rookie_year}"
           + ". The team is currently " + ("active." if is_active else "inactive.")
           )
 

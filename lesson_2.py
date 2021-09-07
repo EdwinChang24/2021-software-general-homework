@@ -95,7 +95,7 @@ def toys() -> None:
     sticky_hands_count: int = m.floor(money / prices["sticky_hands"])
     money %= prices["sticky_hands"]
     print(str(sticky_hands_count) + " Sticky Hands.")
-    print("Your remaining money after these purchases: $" + str(round(money, ndigits=2)))  # floats are imprecise
+    print(f"Your remaining money after these purchases: ${round(money, ndigits=2)}")  # floats are imprecise
     return
 
 
@@ -124,7 +124,7 @@ def factorials() -> None:
         print("error :(")
         return
     x_factorial: int = int(m.factorial(x))
-    guess: str = input("Your answer is: " + str(x_factorial ** 2 if x_factorial > 100 else x_factorial)
+    guess: str = input(f"Your answer is: {x_factorial ** 2 if x_factorial > 100 else x_factorial}"
                        + ".\nDoes this seem right? (y/n) ")
     if ((guess.lower() == "y" or guess.lower() == "yes") and x_factorial > 100)\
             or (x_factorial <= 100 and not (guess.lower() == "y" or guess.lower() == "yes")):
