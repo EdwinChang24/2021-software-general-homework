@@ -88,13 +88,13 @@ def toys() -> None:
     print("Here's how much of each toy you can afford: ", end="")
     plush_count: int = m.floor(money / prices["plush"])
     money %= prices["plush"]
-    print(str(plush_count) + " Jumbo Baby Yoda Plushies, ", end="")
+    print(f"{plush_count} Jumbo Baby Yoda Plushies, ", end="")
     beyblade_count: int = m.floor(money / prices["beyblade"])
     money %= prices["beyblade"]
-    print(str(beyblade_count) + " Beyblades, and ", end="")
+    print(f"{beyblade_count} Beyblades, and ", end="")
     sticky_hands_count: int = m.floor(money / prices["sticky_hands"])
     money %= prices["sticky_hands"]
-    print(str(sticky_hands_count) + " Sticky Hands.")
+    print(f"{sticky_hands_count} Sticky Hands.")
     print(f"Your remaining money after these purchases: ${round(money, ndigits=2)}")  # floats are imprecise
     return
 
