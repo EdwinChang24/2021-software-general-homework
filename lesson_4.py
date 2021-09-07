@@ -63,9 +63,13 @@ def factorial(num: int):
     return num_f
 
 
-if __name__ == "__main__":
+def main():
     conversion(degrees=20.0, fahrenheit=False)
     r: float = 1.0  # example
     print("Volume of a sphere with radius " + str(r) + ": " + str(sphere_volume(radius=r)))
     n: int = 3  # example
     print("Factorial of " + str(n) + " is " + str(factorial(n)) + ".")
+
+
+if __name__ == "__main__":
+    main()

@@ -139,7 +139,11 @@ def factorials() -> None:
     return
 
 
-if __name__ == "__main__":
+def main():
     test_scores()
     toys()
     factorials()
+
+
+if __name__ == "__main__":
+    main()

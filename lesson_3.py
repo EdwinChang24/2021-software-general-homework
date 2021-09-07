@@ -119,7 +119,7 @@ def translate(translate_dict: dict) -> str:
     return translated_sentence
 
 
-if __name__ == "__main__":
+def main():
     try:
         length_of_list(in_list=[1, 3, 5, 7, 9, 2, 4, 6, 8])
         use_extended: str = input("Would you like to use the extended version of the dictionary generator, "
@@ -129,3 +129,7 @@ if __name__ == "__main__":
         translate(translate_dict=dictionary)
     except Exception:
         print("Whoops, an unknown error occured! Please report this.")
+
+
+if __name__ == "__main__":
+    main()
