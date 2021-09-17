@@ -42,7 +42,7 @@ def length_of_list(in_list: list) -> int:
     """
     x: int = 0
     for _ in in_list:
-        x = x + 1
+        x += 1
     return x
 
 
