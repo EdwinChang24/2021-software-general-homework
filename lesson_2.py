@@ -39,29 +39,34 @@
 #########################################################
 
 import math as m
+from typing import List
 
 
 def test_scores() -> None:
     """
     Queries the user for three test scores then prints their average and letter grade.
     """
-    try:
-        score_1: int = int(input("Enter the first test score:\n"))
-        score_2: int = int(input("Enter the second test score:\n"))
-        score_3: int = int(input("Enter the third test score:\n"))
-    except Exception:
-        print("Whoops, that doesn't look like an integer!")
-        return
-    avg: float = (score_1 + score_2 + score_3) / 3
-    print("Average Test Score: " + str(avg))
-    print(
-        "Letter Grade: " + (
-            "A" if 90 <= avg
-            else "B" if 80 <= avg < 90
-            else "C" if 70 <= avg < 80
-            else "D" if 60 <= avg < 70
-            else "F" if avg < 60
-            else "Could not determine"
+    scores: List[int] = [100, 100, 100]
+    for i in range(len(scores)):
+        while True:
+            try:
+                scores[i] = int(input(f"Enter test score #{i+1}:\n"))
+            except Exception:
+                print("Whoops, the test score needs to be an integer! Try again.")
+                continue
+            if scores[i] < 0:
+                print("Whoops, the test score can't be negative! Try again.")
+                continue
+            break
+    avg: float = (scores[0] + scores[1] + scores[2]) / 3
+    print(f"Average Test Score: {avg}")
+    print("Letter Grade: " + (
+        "A" if 90 <= avg
+        else "B" if 80 <= avg < 90
+        else "C" if 70 <= avg < 80
+        else "D" if 60 <= avg < 70
+        else "F" if avg < 60
+        else "Could not determine"
         )
     )
     return
