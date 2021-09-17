@@ -121,7 +121,7 @@ def translate(translate_dict: dict) -> str:
 
 def main():
     try:
-        length_of_list(in_list=[1, 3, 5, 7, 9, 2, 4, 6, 8])
+        print(f"Length of in_list: {length_of_list(in_list=[1, 3, 5, 7, 9, 2, 4, 6, 8])}")
         use_extended: str = input("Would you like to use the extended version of the dictionary generator, "
                                   + "instead of the normal version? (y/n) ")
         dictionary = dictionaries() if use_extended != "y" and use_extended.lower() != "yes"\
